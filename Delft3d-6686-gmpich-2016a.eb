@@ -1,0 +1,23 @@
+name = 'Delft3d'
+version = '6686'
+
+homepage = 'http://oss.deltares.nl/web/delft3d/source-code'
+description = '' 
+
+sources = ['delft3d_repository/src.tar.gz']
+
+toolchain = {'name': 'gmpich', 'version': '2016a'}
+dependencies = [
+	('netCDF', '4.4.1'),
+	('netCDF-Fortran', '4.4.4'),
+	('MPICH', '3.2')
+]
+builddependencies = [
+	('Autoconf', '2.69')
+]
+osdependencies = ["expat-devel"]
+easyblock = 'ConfigureMake'
+preconfigopts = "./autogen.sh && "
+
+
+
